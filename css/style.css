@@ -159,6 +159,32 @@ address {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.social-list {
+  display: flex;
+  gap: 24px;
+}
+
+.social-item {
+  width: 40px;
+  height: 40px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  background-color: var(--brand-color);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--active-color);
+}
+
 /* header */
 
 .header {
@@ -221,11 +247,22 @@ address {
 
 /* Section Hero */
 
+.hero-container-fluid {
+  background-color: var(--dark-bg-color);
+}
+
 .section-hero {
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 188px 0;
 
   text-align: center;
-  background-color: var(--dark-bg-color);
+
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -252,6 +289,17 @@ address {
 
 .advantages-item {
   width: calc((100% - 3 * var(--col-gap)) / 4);
+}
+
+.advantages-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+
+  background: var(--accent-color);
 }
 
 .advantages-title {
@@ -314,7 +362,40 @@ address {
 }
 
 .team-text {
+  margin-bottom: 8px;
+
   text-align: center;
+}
+
+/* section Customers */
+
+.customers-list {
+  display: flex;
+  gap: 24px;
+}
+
+.customers-item {
+  width: calc((100% - 5 * 24px) / 6);
+  height: 88px;
+}
+
+.customers-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+
+  color: #8e8f99;
+}
+
+.customers-link:hover,
+.customers-link:focus {
+  border-color: var(--active-color);
+  color: var(--active-color);
 }
 
 /* Page Portfolio */
@@ -350,6 +431,14 @@ address {
   flex-direction: column;
   width: 100%;
   height: 100%;
+
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.card-link:hover,
+.card-link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .card-content-wrp {
@@ -380,6 +469,16 @@ address {
   background-color: var(--dark-bg-color);
 }
 
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-first-part {
+  max-width: 264px;
+  margin-right: 120px;
+}
+
 .footer-logo {
   display: inline-block;
   margin-bottom: 16px;
@@ -387,6 +486,27 @@ address {
 }
 
 .footer-description {
-  max-width: 264px;
   color: var(--secondary-light-text-color);
+}
+
+.social-label {
+  display: inline-block;
+  margin-bottom: 16px;
+
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--primary-light-text-color);
+}
+
+.footer-social-list {
+  gap: 16px;
+}
+
+.footer-social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--success-color);
 }
