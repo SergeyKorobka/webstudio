@@ -13,7 +13,7 @@
   --main-bg-color: #ffffff;
   --dark-bg-color: #2e2f42;
   --light-bg-color: #f4f4fd;
-  --hero-overlay-color: rgba(46, 47, 66, 0.7);
+  --modal-bg-color: #fcfcfc;
 
   --success-color: #31d0aa;
 
@@ -22,9 +22,15 @@
   --primary-light-text-color: #ffffff;
   --secondary-light-text-color: #e7e9fc;
 
+  --backdrop-color: rgba(46, 47, 66, 0.4);
+  --hero-overlay-color: rgba(46, 47, 66, 0.7);
+
   /* gap */
   --col-gap: 24px;
   --row-gap: 48px;
+
+  /* timing-function */
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* body style */
@@ -139,6 +145,9 @@ address {
   border: none;
   color: var(--primary-light-text-color);
   background-color: var(--brand-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .btn.main:is(:hover, :focus) {
@@ -149,6 +158,10 @@ address {
   border: 1px solid #e7e9fc;
   color: var(--brand-color);
   background-color: var(--light-bg-color);
+
+  transition: background-color 250ms var(--timing-function),
+    border-color 250ms var(--timing-function), color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
 }
 
 .btn.secondary:is(:hover, :focus, .active) {
@@ -178,6 +191,8 @@ address {
   border-radius: 50%;
 
   background-color: var(--brand-color);
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .social-link:hover,
@@ -189,6 +204,8 @@ address {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -214,11 +231,38 @@ address {
 }
 
 .nav-link {
+  position: relative;
   display: block;
   padding: 24px 0;
 
   font-weight: 500;
   color: var(--primary-dark-text-color);
+
+  transition: color 250ms var(--timing-function);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+
+  background-color: var(--active-color);
+
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 250ms var(--timing-function);
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after,
+.nav-link.current::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .header-address {
@@ -236,6 +280,8 @@ address {
   padding: 24px 0;
 
   color: var(--secondary-dark-text-color);
+
+  transition: color 250ms var(--timing-function);
 }
 
 .nav-link:is(:hover, :focus, .current),
@@ -277,7 +323,6 @@ address {
 
 .hero-btn {
   padding: 16px 32px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* section Our advantages */
@@ -390,6 +435,8 @@ address {
   border-radius: 4px;
 
   color: #8e8f99;
+
+  transition: color 250ms var(--timing-function), border-color 250ms var(--timing-function);
 }
 
 .customers-link:hover,
@@ -433,12 +480,46 @@ address {
   height: 100%;
 
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+
+  transition: box-shadow 250ms var(--timing-function);
 }
 
 .card-link:hover,
 .card-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.card-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  transform: translateY(101%);
+
+  background-color: rgba(77, 90, 229, 0.9);
+  transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function);
+}
+
+.card-link:hover .card-overlay,
+.card-link:focus .card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay-text {
+  padding: 40px 32px;
+
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
 }
 
 .card-content-wrp {
@@ -504,9 +585,79 @@ address {
 
 .footer-social-link {
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms var(--timing-function);
 }
 
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--success-color);
+}
+
+/* Modal window */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100vw;
+  height: 100%;
+  padding: 30px 15px;
+
+  background-color: var(--backdrop-color);
+  overflow-y: auto;
+
+  transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 408px;
+  min-height: 576px;
+  border-radius: 4px;
+
+  background-color: var(--modal-bg-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  transition: transform 500ms cubic-bezier(0.07, 1.06, 0.34, 0.86);
+}
+
+.backdrop.is-hidden .modal {
+  transform: translateY(-100%);
+}
+.btn-close-modal {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  color: #000000;
+  background-color: #e7e9fc;
+  cursor: pointer;
+
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
+}
+
+.btn-close-modal:hover,
+.btn-close-modal:focus {
+  color: var(--primary-light-text-color);
+  background-color: var(--active-color);
 }
