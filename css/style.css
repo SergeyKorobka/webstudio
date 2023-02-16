@@ -164,7 +164,7 @@ address {
     box-shadow 250ms var(--timing-function);
 }
 
-.btn.secondary:is(:hover, :focus, .active) {
+.btn.secondary:is(:hover, :focus, .is-active) {
   border-color: transparent;
   color: var(--primary-light-text-color);
   background-color: var(--active-color);

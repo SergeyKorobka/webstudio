@@ -60,25 +60,33 @@
           <!-- filter-btn -->
           <ul class="filter-list">
             <li class="filter-item">
-              <button class="btn secondary filter-btn active" type="button">All</button>
+              <button class="btn secondary filter-btn is-active" type="button" data-filter="All">
+                All
+              </button>
             </li>
             <li class="filter-item">
-              <button class="btn secondary filter-btn" type="button">Web Site</button>
+              <button class="btn secondary filter-btn" type="button" data-filter="Web Site">
+                Web Site
+              </button>
             </li>
             <li class="filter-item">
-              <button class="btn secondary filter-btn" type="button">App</button>
+              <button class="btn secondary filter-btn" type="button" data-filter="App">App</button>
             </li>
             <li class="filter-item">
-              <button class="btn secondary filter-btn" type="button">Design</button>
+              <button class="btn secondary filter-btn" type="button" data-filter="Design">
+                Design
+              </button>
             </li>
             <li class="filter-item">
-              <button class="btn secondary filter-btn" type="button">Marketing</button>
+              <button class="btn secondary filter-btn" type="button" data-filter="Marketing">
+                Marketing
+              </button>
             </li>
           </ul>
 
           <!-- portfolio cards -->
           <ul class="portfolio-cards">
-            <li class="portfolio-card">
+            <li class="portfolio-card" data-card="App">
               <a class="card-link" href="#"
                 ><div class="card-thumb">
                   <img src="./images/portfolio-1.jpg" alt="Banking App" />
@@ -96,7 +104,7 @@
               >
             </li>
 
-            <li class="portfolio-card">
+            <li class="portfolio-card" data-card="Marketing">
               <a class="card-link" href="#">
                 <div class="card-thumb">
                   <img src="./images/portfolio-2.jpg" alt="Cashless Payment" />
@@ -114,7 +122,7 @@
               >
             </li>
 
-            <li class="portfolio-card">
+            <li class="portfolio-card" data-card="App">
               <a class="card-link" href="#">
                 <div class="card-thumb">
                   <img src="./images/portfolio-3.jpg" alt="Meditaion App" />
@@ -132,7 +140,7 @@
               >
             </li>
 
-            <li class="portfolio-card">
+            <li class="portfolio-card" data-card="Marketing">
               <a class="card-link" href="#">
                 <div class="card-thumb">
                   <img src="./images/portfolio-4.jpg" alt="Taxi Service" />
@@ -150,7 +158,7 @@
               >
             </li>
 
-            <li class="portfolio-card">
+            <li class="portfolio-card" data-card="Design">
               <a class="card-link" href="#">
                 <div class="card-thumb">
                   <img src="./images/portfolio-5.jpg" alt="Screen Illustrations" />
@@ -168,7 +176,7 @@
               >
             </li>
 
-            <li class="portfolio-card">
+            <li class="portfolio-card" data-card="Marketing">
               <a class="card-link" href="#">
                 <div class="card-thumb">
                   <img src="./images/portfolio-6.jpg" alt="Online Courses" />
@@ -186,7 +194,7 @@
               >
             </li>
 
-            <li class="portfolio-card">
+            <li class="portfolio-card" data-card="Design">
               <a class="card-link" href="#">
                 <div class="card-thumb">
                   <img src="./images/portfolio-7.jpg" alt="Instagram Stories" />
@@ -204,7 +212,7 @@
               >
             </li>
 
-            <li class="portfolio-card">
+            <li class="portfolio-card" data-card="Web Site">
               <a class="card-link" href="#">
                 <div class="card-thumb">
                   <img src="./images/portfolio-8.jpg" alt="Organic Food" />
@@ -222,7 +230,7 @@
               >
             </li>
 
-            <li class="portfolio-card">
+            <li class="portfolio-card" data-card="Web Site">
               <a class="card-link" href="#">
                 <div class="card-thumb">
                   <img src="./images/portfolio-9.jpg" alt="Fresh Coffee" />
@@ -295,5 +303,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/filter.js"></script>
   </body>
 </html>
