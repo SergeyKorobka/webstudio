@@ -54,6 +54,69 @@
           </svg>
         </button>
       </div>
+
+      <div class="mobile-menu">
+        <div class="mobile-menu-container">
+          <nav class="mobile-nav">
+            <ul class="mobile-nav-list">
+              <li class="mobile-nav-item">
+                <a class="mobile-nav-link current" href="./index.html">Studio</a>
+              </li>
+              <li class="mobile-nav-item">
+                <a class="mobile-nav-link" href="./portfolio.html">Portfolio</a>
+              </li>
+              <li class="mobile-nav-item"><a class="mobile-nav-link" href="#">Contacts</a></li>
+            </ul>
+          </nav>
+
+          <address class="mobile-address">
+            <ul class="mobile-address-list">
+              <li class="mobile-address-item">
+                <a class="mobile-address-link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="mobile-address-item">
+                <a class="mobile-address-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+              </li>
+            </ul>
+          </address>
+
+          <ul class="social-list mobile-social-list">
+            <li class="social-item">
+              <a href="" class="social-link">
+                <svg class="social-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="" class="social-link">
+                <svg class="social-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="" class="social-link">
+                <svg class="social-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="" class="social-link">
+                <svg class="social-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
     <main>
       <!-- section hero -->
@@ -67,7 +130,7 @@
       </div>
 
       <!-- section Our advantages -->
-      <!-- <section class="section">
+      <section class="section">
         <div class="container">
           <h2 class="visually-hidden">Our advantages</h2>
 
@@ -125,10 +188,10 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- section What are we doing -->
-      <!-- <section class="section section-doing">
+      <section class="section section-doing">
         <div class="container">
           <h2 class="section-title">What are we doing</h2>
 
@@ -150,11 +213,11 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- section Our Team -->
-      <!-- <section class="section section-our-team">
-        <div class="container">
+      <section class="section section-our-team">
+        <div class="container container-our-team container-secondary">
           <h2 class="section-title">Our team</h2>
 
           <ul class="team-list">
@@ -164,7 +227,7 @@
                 <h3 class="team-title">Mark Guerrero</h3>
                 <p class="team-text">Product Designer</p>
 
-                <ul class="social-list">
+                <ul class="social-list team-social-list">
                   <li class="social-item">
                     <a href="" class="social-link">
                       <svg class="social-icon" width="16" height="16">
@@ -206,7 +269,7 @@
                 <h3 class="team-title">Tom Ford</h3>
                 <p class="team-text">Frontend Developer</p>
 
-                <ul class="social-list">
+                <ul class="social-list team-social-list">
                   <li class="social-item">
                     <a href="" class="social-link">
                       <svg class="social-icon" width="16" height="16">
@@ -248,7 +311,7 @@
                 <h3 class="team-title">Camila Garcia</h3>
                 <p class="team-text">Marketing</p>
 
-                <ul class="social-list">
+                <ul class="social-list team-social-list">
                   <li class="social-item">
                     <a href="" class="social-link">
                       <svg class="social-icon" width="16" height="16">
@@ -290,7 +353,7 @@
                 <h3 class="team-title">Daniel Wilson</h3>
                 <p class="team-text">UI Designer</p>
 
-                <ul class="social-list">
+                <ul class="social-list team-social-list">
                   <li class="social-item">
                     <a href="" class="social-link">
                       <svg class="social-icon" width="16" height="16">
@@ -327,10 +390,10 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
-      <!-- <section class="section">
-        <div class="container">
+      <section class="section">
+        <div class="container container-secondary">
           <h2 class="section-title">Customers</h2>
           <ul class="customers-list">
             <li class="customers-item">
@@ -377,12 +440,12 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
 
     <!-- footer -->
-    <!-- <footer class="footer">
-      <div class="container footer-container">
+    <footer class="footer">
+      <div class="container footer-container container-secondary">
         <div class="footer-first-part">
           <a class="logo footer-logo" href="./index.html"
             ><span class="logo-accent">Web</span>Studio</a
@@ -449,11 +512,11 @@
           </div>
         </form>
       </div>
-    </footer> -->
+    </footer>
 
     <!-- Modal -->
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="btn-close-modal" data-modal-close>
           <svg width="8" height="8">
@@ -521,7 +584,7 @@
           <button class="btn main btn-send-form" type="submit">Send</button>
         </form>
       </div>
-    </div> -->
+    </div>
 
     <script src="./js/modal.js" type="module"></script>
   </body>

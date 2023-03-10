@@ -26,8 +26,8 @@
     <header class="header">
       <div class="container header-container">
         <nav class="header-nav">
-          <a class="logo header-logo" href="./index.html">
-            <span class="logo-accent">Web</span>Studio</a
+          <a class="logo header-logo" href="./index.html"
+            ><span class="logo-accent">Web</span>Studio</a
           >
 
           <ul class="nav-list">
@@ -49,11 +49,17 @@
             </li>
           </ul>
         </address>
+
+        <button class="burger-menu" type="button">
+          <svg class="burger-icon" width="32" height="32">
+            <use href="./images/sprite.svg#menu-burger"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
     <main>
-      <section class="section section-portfolio">
+      <section class="section-portfolio">
         <div class="container">
           <h1 class="visually-hidden">Portfolio</h1>
 
@@ -254,7 +260,7 @@
 
     <!-- footer -->
     <footer class="footer">
-      <div class="container footer-container">
+      <div class="container footer-container container-secondary">
         <div class="footer-first-part">
           <a class="logo footer-logo" href="./index.html"
             ><span class="logo-accent">Web</span>Studio</a
@@ -301,6 +307,25 @@
             </li>
           </ul>
         </div>
+
+        <form class="subscribe-form">
+          <p class="subscribe-title">Subscribe</p>
+          <div class="subscribe-wrapper">
+            <input
+              type="email"
+              class="subscribe-input"
+              name="email"
+              aria-label="email"
+              placeholder="E-mail"
+            />
+            <button class="btn main subscribe-btn" type="submit">
+              Subscribe
+              <svg width="24" height="24">
+                <use href="./images/sprite.svg#send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
 
