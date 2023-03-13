@@ -47,6 +47,85 @@
             </li>
           </ul>
         </address>
+
+        <button
+          class="burger-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-open-menu
+        >
+          <svg class="burger-icon" width="32" height="32">
+            <use href="./images/sprite.svg#menu-burger"></use>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="mobile-menu" id="mobile-menu" data-menu>
+        <div class="mobile-menu-container container">
+          <button class="btn-close-modal" data-close-menu>
+            <svg width="8" height="8">
+              <use href="./images/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <nav class="mobile-nav">
+            <ul class="mobile-nav-list">
+              <li class="mobile-nav-item">
+                <a class="mobile-nav-link current" href="./index.html">Studio</a>
+              </li>
+              <li class="mobile-nav-item">
+                <a class="mobile-nav-link" href="./portfolio.html">Portfolio</a>
+              </li>
+              <li class="mobile-nav-item"><a class="mobile-nav-link" href="#">Contacts</a></li>
+            </ul>
+          </nav>
+
+          <address class="mobile-address">
+            <ul class="mobile-address-list">
+              <li class="mobile-address-item">
+                <a class="mobile-tel-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+              </li>
+              <li class="mobile-address-item">
+                <a class="mobile-email-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              </li>
+            </ul>
+          </address>
+
+          <ul class="social-list mobile-social-list">
+            <li class="social-item">
+              <a href="" class="social-link">
+                <svg class="social-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="" class="social-link">
+                <svg class="social-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="" class="social-link">
+                <svg class="social-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="" class="social-link">
+                <svg class="social-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -128,16 +207,39 @@
 
           <ul class="doing-list">
             <li class="doing-item">
-              <img src="./images/what-are-we-doing-1.jpg" alt="website on monitor" width="360" />
-            </li>
-
-            <li class="doing-item">
-              <img src="./images/what-are-we-doing-2.jpg" alt="messenger on phone" width="360" />
+              <img
+                srcset="
+                  ./images/doing/doing1.jpg    1x,
+                  ./images/doing/doing1@2x.jpg 2x,
+                  ./images/doing/doing1@3x.jpg 3x
+                "
+                src="./images/doing/doing1.jpg"
+                alt="website on monitor"
+                width="360"
+              />
             </li>
 
             <li class="doing-item">
               <img
-                src="./images/what-are-we-doing-3.jpg"
+                srcset="
+                  ./images/doing/doing2.jpg    1x,
+                  ./images/doing/doing2@2x.jpg 2x,
+                  ./images/doing/doing2@3x.jpg 3x
+                "
+                src="./images/doing/doing2.jpg"
+                alt="messenger on phone"
+                width="360"
+              />
+            </li>
+
+            <li class="doing-item">
+              <img
+                srcset="
+                  ./images/doing/doing3.jpg    1x,
+                  ./images/doing/doing3@2x.jpg 2x,
+                  ./images/doing/doing3@3x.jpg 3x
+                "
+                src="./images/doing/doing3.jpg"
                 alt="man working on the phone"
                 width="360"
               />
@@ -148,17 +250,26 @@
 
       <!-- section Our Team -->
       <section class="section section-our-team">
-        <div class="container">
+        <div class="container container-our-team container-secondary">
           <h2 class="section-title">Our team</h2>
 
           <ul class="team-list">
             <li class="team-item">
-              <img src="./images/team-1.jpg" alt="photo Mark Guerrero" width="264" />
+              <img
+                srcset="
+                  ./images/team/team1.jpg    1x,
+                  ./images/team/team1@2x.jpg 2x,
+                  ./images/team/team1@3x.jpg 3x
+                "
+                src="./images/team/team1.jpg"
+                alt="photo Mark Guerrero"
+                width="264"
+              />
               <div class="team-content-wrp">
                 <h3 class="team-title">Mark Guerrero</h3>
                 <p class="team-text">Product Designer</p>
 
-                <ul class="social-list">
+                <ul class="social-list team-social-list">
                   <li class="social-item">
                     <a href="" class="social-link">
                       <svg class="social-icon" width="16" height="16">
@@ -195,12 +306,21 @@
             </li>
 
             <li class="team-item">
-              <img src="./images/team-2.jpg" alt="photo Tom Ford" width="264" />
+              <img
+                srcset="
+                  ./images/team/team2.jpg    1x,
+                  ./images/team/team2@2x.jpg 2x,
+                  ./images/team/team2@3x.jpg 3x
+                "
+                src="./images/team/team2.jpg"
+                alt="photo Tom Ford"
+                width="264"
+              />
               <div class="team-content-wrp">
                 <h3 class="team-title">Tom Ford</h3>
                 <p class="team-text">Frontend Developer</p>
 
-                <ul class="social-list">
+                <ul class="social-list team-social-list">
                   <li class="social-item">
                     <a href="" class="social-link">
                       <svg class="social-icon" width="16" height="16">
@@ -237,12 +357,21 @@
             </li>
 
             <li class="team-item">
-              <img src="./images/team-3.jpg" alt="photo Camila Garcia" width="264" />
+              <img
+                srcset="
+                  ./images/team/team3.jpg    1x,
+                  ./images/team/team3@2x.jpg 2x,
+                  ./images/team/team3@3x.jpg 3x
+                "
+                src="./images/team/team3.jpg"
+                alt="photo Camila Garcia"
+                width="264"
+              />
               <div class="team-content-wrp">
                 <h3 class="team-title">Camila Garcia</h3>
                 <p class="team-text">Marketing</p>
 
-                <ul class="social-list">
+                <ul class="social-list team-social-list">
                   <li class="social-item">
                     <a href="" class="social-link">
                       <svg class="social-icon" width="16" height="16">
@@ -279,12 +408,21 @@
             </li>
 
             <li class="team-item">
-              <img src="./images/team-4.jpg" alt="photo Daniel Wilson" width="264" />
+              <img
+                srcset="
+                  ./images/team/team4.jpg    1x,
+                  ./images/team/team4@2x.jpg 2x,
+                  ./images/team/team4@3x.jpg 3x
+                "
+                src="./images/team/team4.jpg"
+                alt="photo Daniel Wilson"
+                width="264"
+              />
               <div class="team-content-wrp">
                 <h3 class="team-title">Daniel Wilson</h3>
                 <p class="team-text">UI Designer</p>
 
-                <ul class="social-list">
+                <ul class="social-list team-social-list">
                   <li class="social-item">
                     <a href="" class="social-link">
                       <svg class="social-icon" width="16" height="16">
@@ -324,7 +462,7 @@
       </section>
 
       <section class="section">
-        <div class="container">
+        <div class="container container-secondary">
           <h2 class="section-title">Customers</h2>
           <ul class="customers-list">
             <li class="customers-item">
@@ -376,7 +514,7 @@
 
     <!-- footer -->
     <footer class="footer">
-      <div class="container footer-container">
+      <div class="container footer-container container-secondary">
         <div class="footer-first-part">
           <a class="logo footer-logo" href="./index.html"
             ><span class="logo-accent">Web</span>Studio</a
@@ -518,5 +656,6 @@
     </div>
 
     <script src="./js/modal.js" type="module"></script>
+    <script src="./js/mobile-menu.js" type="module"></script>
   </body>
 </html>
