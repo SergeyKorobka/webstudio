@@ -476,7 +476,7 @@ address {
 
 .footer-first-part {
   max-width: 264px;
-  margin-right: 120px;
+  /* margin-right: 120px; */
 }
 
 .footer-logo {
