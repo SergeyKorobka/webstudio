@@ -161,6 +161,7 @@ address {
 
 .social-list {
   display: flex;
+  justify-content: center;
   gap: 24px;
 }
 
@@ -508,7 +509,6 @@ address {
 }
 
 .footer-social-list {
-  justify-content: center;
   gap: 16px;
 }
 
