@@ -33,38 +33,16 @@ body {
 
 /* Reset style */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
-
-ul {
+.list {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
-a {
+.link {
   color: currentColor;
   text-decoration: none;
 }
 
 /* adaptive img */
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-address {
-  font-style: normal;
-}
 
 /* utils style */
 
@@ -122,6 +100,10 @@ address {
   color: var(--active-color);
 }
 
+.address {
+  font-style: normal;
+}
+
 /* Page Studio */
 
 /* Section Hero */
@@ -149,7 +131,6 @@ address {
   letter-spacing: 0.04em;
   color: var(--primary-light-text-color);
   background-color: var(--brand-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   cursor: pointer;
 }
@@ -211,8 +192,6 @@ address {
 .filter-btn:is(:hover, :focus, .active) {
   color: var(--primary-light-text-color);
   background-color: var(--active-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .card-title {
