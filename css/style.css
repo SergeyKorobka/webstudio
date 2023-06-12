@@ -201,7 +201,7 @@ address {
     max-width: 766px;
   }
 
-  @media not screen and (min-width: 1200px) {
+  @media not screen and (min-width: 1158px) {
     .container-secondary {
       max-width: 582px;
     }
@@ -210,7 +210,7 @@ address {
 
 /* -------------- common desktop ---------------- */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .section {
     padding: 120px 0;
   }
@@ -338,7 +338,7 @@ address {
   }
 }
 
-@media not screen and (min-width: 1200px) {
+@media not screen and (min-width: 1158px) {
   .address-item:not(:last-child) {
     margin-bottom: 8px;
   }
@@ -346,7 +346,7 @@ address {
 
 /* ------------------ header desktop ------------------ */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .header-logo {
     margin-right: 76px;
   }
@@ -511,7 +511,7 @@ address {
   padding: 16px 32px;
 }
 
-@media screen and (min-width: 429px) {
+@media screen and (min-width: 428px) {
   .section-hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/hero/hero-tablet.jpg);
@@ -550,7 +550,7 @@ address {
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .section-hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/hero/hero-desktop.jpg);
@@ -577,7 +577,7 @@ address {
 
 /* ------------------- Section Hero desktop ---------------------- */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .section-hero {
     max-width: 1440px;
     margin: 0 auto;
@@ -628,7 +628,7 @@ address {
   }
 }
 
-@media not screen and (min-width: 1200px) {
+@media not screen and (min-width: 1158px) {
   .advantages-text {
     font-weight: 500;
   }
@@ -636,7 +636,7 @@ address {
 
 /* ------------------- Our advantages desktop ---------------------- */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .advantages-item {
     width: calc((100% - 3 * 24px) / 4);
   }
@@ -660,7 +660,7 @@ address {
 }
 
 /* ------------------- section What are we doing ------------------- */
-@media not screen and (min-width: 1200px) {
+@media not screen and (min-width: 1158px) {
   .section-doing {
     display: none;
   }
@@ -668,7 +668,7 @@ address {
 
 /* ------------------- section What are we doing desktop ------------------- */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .section-doing {
     padding-top: 0;
   }
@@ -747,7 +747,7 @@ address {
 
 /* ------------------- section Our Team desktop ---------------------- */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .team-item {
     width: calc((100% - 3 * 24px) / 4);
   }
@@ -802,7 +802,7 @@ address {
 
 /* ------------------- section Customers desktop ---------------------- */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .customers-item {
     width: calc((100% - 5 * 24px) / 6);
   }
@@ -935,7 +935,7 @@ address {
 
 /* ------------------- page portfolio desktop ---------------------- */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .section-portfolio {
     padding: 96px 0 120px;
   }
@@ -989,7 +989,7 @@ address {
 }
 
 .footer-social-link {
-  background-color: rgba(255, 255, 255, 0.1);
+  /* background-color: rgba(255, 255, 255, 0.1); */
 
   transition: background-color 250ms var(--timing-function);
 }
@@ -1095,7 +1095,7 @@ address {
 
 /* ------------------- footer desktop ---------------------- */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .footer {
     padding: 100px 0;
   }
@@ -1272,14 +1272,11 @@ address {
 }
 
 .form-field-checkbox {
-  display: flex;
-  align-items: center;
-  gap: 8px;
   margin-bottom: 24px;
 }
 
 .custom-checkbox {
-  display: flex;
+  display: inline-flex;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
@@ -1347,11 +1344,11 @@ address {
   padding: 16px 32px;
 }
 
-@media screen and (max-width: 416px) {
+/* @media screen and (max-width: 416px) {
   .form-field-checkbox {
     align-items: flex-start;
   }
-}
+} */
 
 /* ------------------- Modal window tablet ---------------------- */
 
@@ -1363,5 +1360,5 @@ address {
 
 /* ------------------- Modal window desktop ---------------------- */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
 }
